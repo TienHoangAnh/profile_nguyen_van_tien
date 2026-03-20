@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bảng điểm các môn học và xếp loại tốt nghiệp." />
+    <title>Bảng điểm &amp; loại bằng | Nguyễn Văn Tiến</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="./index.html" aria-label="Về trang chủ">
+          <span class="brand__mark" aria-hidden="true">N</span>
+          <span class="brand__text">Nguyễn Văn Tiến</span>
+        </a>
+
+        <nav class="nav" aria-label="Điều hướng">
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenuGrades">
+            <span class="nav__toggleBars" aria-hidden="true"></span>
+            <span class="sr-only">Mở/đóng menu</span>
+          </button>
+          <div class="nav__menu" id="navMenuGrades">
+            <a class="nav__link" href="./index.html">Trang chủ</a>
+            <a class="nav__link" href="#mau-tinh-bang">Bằng tốt nghiệp</a>
+            <a class="nav__link" href="#foundation">Foundation &amp; English</a>
+            <a class="nav__link" href="#it-major">IT / Major</a>
+            <a class="nav__link" href="#sec-pearson">Pearson BTEC</a>
+          </div>
+        </nav>
+
+        <div class="header__actions">
+          <button class="btn btn--ghost" type="button" id="themeToggle" aria-pressed="false">
+            <span class="btn__icon" aria-hidden="true">◐</span>
+            <span class="btn__text">Dark</span>
+          </button>
+          <!-- <a class="btn btn--ghost" href="./assets/CV.pdf" download>Tải CV (PDF)</a> -->
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding-bottom: 48px">
+      <div class="grades-hero">
+        <h1 class="grades-hero__title">Bảng điểm các môn &amp; <span class="grad">xếp loại tốt nghiệp</span></h1>
+      </div>
+
+      <div class="degree-summary">
+        <article class="degree-card degree-card--highlight" id="mau-tinh-bang">
+          <p class="degree-card__label">Loại bằng tốt nghiệp (ước lượng theo TB các môn tính bằng)</p>
+          <p class="degree-card__value" id="degreeClassVi">—</p>
+          <p class="degree-card__sub" id="degreeClassEn"></p>
+          <p class="scale-note">
+            <strong>Quy ước xếp loại (thang 100):</strong>
+            <code>&lt;40</code> Fail · <code>≥40</code> Third · <code>≥50</code> Lower Second (2:2) ·
+            <code>≥60</code> Upper Second (2:1) · <code>≥70</code> First Class
+          </p>
+        </article>
+        <article class="degree-card">
+          <p class="degree-card__label">Điểm trung bình 5 môn tính bằng</p>
+          <p class="degree-card__value"><span id="degreeAvg">—</span> / 100</p>
+          <p class="degree-card__sub">
+            COMP1640 Enterprise Project · COMP1787 Coursework · COMP1786 Mobile App Dev · COMP1682.3 Final Project ·
+            COMP1649 Coursework.
+          </p>
+        </article>
+      </div>
+
+      <!-- Môn tính bằng -->
+      <section class="grades-section" aria-labelledby="sec-grad">
+        <h2 class="grades-section__title" id="sec-grad">
+          Các môn tính bằng tốt nghiệp
+          <span class="grades-section__badge">Thang 100 · UK classification</span>
+        </h2>
+        <div class="grades-table-wrap">
+          <table class="grades-table" id="tableGraduation">
+            <thead>
+              <tr>
+                <th>Mã môn</th>
+                <th>Tên môn</th>
+                <th>Học kỳ</th>
+                <th>Điểm</th>
+                <th>Xếp loại môn</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Foundation & English -->
+      <section class="grades-section" id="foundation" aria-labelledby="sec-found">
+        <h2 class="grades-section__title" id="sec-found">
+          Foundation &amp; English
+          <span class="grades-section__badge">Thang 10</span>
+        </h2>
+        <div class="grades-table-wrap">
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Mã môn</th>
+                <th>Tên môn</th>
+                <th>Học kỳ</th>
+                <th>Điểm TB</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyFoundation"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Võ -->
+      <section class="grades-section" aria-labelledby="sec-vo">
+        <h2 class="grades-section__title" id="sec-vo">
+          Giáo dục thể chất (Võ)
+          <span class="grades-section__badge">Thang 10</span>
+        </h2>
+        <div class="insight-box">
+          <p><strong>Tiến bộ:</strong> 7.7 → 8.6 → 9.0 — thể hiện thái độ, kỷ luật tốt, tinh thần luyện tập ổn định.</p>
+        </div>
+        <div class="grades-table-wrap" style="margin-top: 14px">
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Mã môn</th>
+                <th>Tên môn</th>
+                <th>Học kỳ</th>
+                <th>Điểm TB</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyVo"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- IT Major -->
+      <section class="grades-section" id="it-major" aria-labelledby="sec-it">
+        <h2 class="grades-section__title" id="sec-it">
+          IT / Programming / Major
+          <span class="grades-section__badge">Thang 10</span>
+        </h2>
+        <div class="grades-table-wrap">
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Mã môn</th>
+                <th>Tên môn</th>
+                <th>Học kỳ</th>
+                <th>Điểm TB</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyIt"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Pearson — đúng cột như bảng điểm diem.md -->
+      <section class="grades-section" aria-labelledby="sec-pearson">
+        <h2 class="grades-section__title" id="sec-pearson">
+          Pearson BTEC (Pass-based)
+          <span class="grades-section__badge">GCH1105 · 14 môn Pearson BTEC</span>
+        </h2>
+        <div class="grades-table-wrap">
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Tên lớp</th>
+                <th>Mã môn</th>
+                <th>Học kỳ</th>
+                <th>Điểm TB</th>
+                <th>Xếp loại</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyPearson"></tbody>
+          </table>
+        </div>
+        <div class="pearson-box" style="margin-top: 14px">
+          <p style="margin-bottom: 0">
+            <strong>Lưu ý:</strong> Module Code (vd. 1649) là unit Pearson BTEC; khác mã môn COMP1649 trong bảng tốt
+            nghiệp.
+          </p>
+        </div>
+      </section>
+
+      <p class="form__hint" style="margin-top: 32px">
+        <a class="link" href="./index.html">← Về trang profile</a>
+        &nbsp;·&nbsp;
+        <a class="link" href="./assets/CV.pdf" download>Tải CV (PDF)</a>
+      </p>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">© <span id="year"></span> Nguyễn Văn Tiến</p>
+        <a class="link" href="./index.html">Trang chủ</a>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const STORAGE_KEY = "profile_theme";
+
+        const foundation = [
+          ["SSGG101", "Study Skills", "Summer 2021", 8.9],
+          ["ENR001", "English (Level 1)", "Summer 2021", 7.5],
+          ["ENR101", "English (Level 2)", "Fall 2021", 7.5],
+          ["ENR201", "English (Level 3)", "Fall 2021", 7.0],
+          ["ENR301", "English (Level 4)", "Spring 2022", 5.8],
+          ["ENR401", "English (Level 5)", "Spring 2022", 5.7],
+          ["ENI501", "English (Advanced)", "Summer 2022", 5.7],
+          ["AEG115", "Academic English", "Spring 2023", 6.3],
+          ["AEG116", "Academic English (B2 - retake)", "Fall 2024", 7.1],
+        ];
+
+        const vo = [
+          ["VOG111", "Martial Arts 1", "Fall 2022", 7.7],
+          ["VOG121", "Martial Arts 2", "Summer 2023", 8.6],
+          ["VOG131", "Martial Arts 3", "Fall 2023", 9.0],
+        ];
+
+        const itMajor = [
+          ["PROG102", "Programming", "Fall 2022", 6.5],
+          ["PROG191", "Individual Project", "Summer 2023", 5.0],
+          ["WEBG301", "Web Development", "Summer 2023", 7.0],
+        ];
+
+        const graduation = [
+          { code: "COMP1640", name: "Enterprise Project", term: "Spring 2025", score: 62, status: "Passed" },
+          { code: "COMP1787", name: "Coursework", term: "Spring 2025", score: 68, status: "Passed" },
+          { code: "COMP1786", name: "Mobile App Dev", term: "Fall 2025", score: 62, status: "Passed" },
+          { code: "COMP1682.3", name: "Final Project", term: "Fall 2025", score: 62, status: "Passed (đồ án)" },
+          { code: "COMP1649", name: "Coursework", term: "Fall 2025", score: 64, status: "Passed" },
+        ];
+
+        /** Đúng từng dòng bảng điểm diem.md (PEARSON BTEC) */
+        const pearsonRows = [
+          ["GCH1105", "1618", "Fall 2022", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1619", "Fall 2022", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1620", "Spring 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1622", "Spring 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1623", "Summer 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1631", "Summer 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1633", "Spring 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1639", "Spring 2024", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1641", "Spring 2024", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1644", "Fall 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1649", "Spring 2024", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1651", "Fall 2023", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1670", "Spring 2024", 6.5, "Pass", "Passed"],
+          ["GCH1105", "1690", "Fall 2023", 6.5, "Pass", "Passed"],
+        ];
+
+        function ukClass(score) {
+          if (score < 40)
+            return { vi: "Không đạt (Fail)", en: "Fail", cls: "" };
+          if (score < 50)
+            return { vi: "Hạng Ba (Third Class)", en: "Third Class", cls: "" };
+          if (score < 60)
+            return { vi: "Hạng Nhì Thấp — Lower Second (2:2)", en: "Lower Second (2:2)", cls: "class-2-2" };
+          if (score < 70)
+            return {
+              vi: "Hạng Nhì Cao — Upper Second (2:1)",
+              en: "Upper Second Class Honours (2:1)",
+              cls: "class-2-1",
+            };
+          return { vi: "Hạng Xuất sắc — First Class", en: "First Class Honours", cls: "class-1st" };
+        }
+
+        function fillSimpleTable(tbodyId, rows) {
+          const tb = document.getElementById(tbodyId);
+          if (!tb) return;
+          tb.innerHTML = rows
+            .map(
+              (r) =>
+                `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td class="num">${r[3]}</td><td>Passed</td></tr>`,
+            )
+            .join("");
+        }
+
+        fillSimpleTable("tbodyFoundation", foundation);
+        fillSimpleTable("tbodyVo", vo);
+        fillSimpleTable("tbodyIt", itMajor);
+
+        const pearsonTbody = document.getElementById("tbodyPearson");
+        if (pearsonTbody) {
+          pearsonTbody.innerHTML = pearsonRows
+            .map(
+              (r) => `
+            <tr>
+              <td>${r[0]}</td>
+              <td class="num"><strong>${r[1]}</strong></td>
+              <td>${r[2]}</td>
+              <td class="num">${r[3]}</td>
+              <td>${r[4]}</td>
+              <td>${r[5]}</td>
+            </tr>`,
+            )
+            .join("");
+        }
+
+        const avg =
+          graduation.reduce((s, m) => s + m.score, 0) / graduation.length;
+        const overall = ukClass(avg);
+
+        document.getElementById("degreeAvg").textContent = avg.toFixed(2);
+        document.getElementById("degreeClassVi").textContent = overall.vi;
+        document.getElementById("degreeClassEn").textContent = overall.en;
+
+        const gradBody = document.querySelector("#tableGraduation tbody");
+        gradBody.innerHTML = graduation
+          .map((m) => {
+            const c = ukClass(m.score);
+            return `<tr>
+            <td>${m.code}</td>
+            <td>${m.name}</td>
+            <td>${m.term}</td>
+            <td class="num">${m.score}</td>
+            <td class="num ${c.cls}">${c.vi.split("—")[0].trim()}</td>
+            <td>${m.status}</td>
+          </tr>`;
+          })
+          .join("");
+
+        /* Theme */
+        function setTheme(theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+          localStorage.setItem(STORAGE_KEY, theme);
+          const btn = document.getElementById("themeToggle");
+          if (btn) {
+            btn.setAttribute("aria-pressed", String(theme === "light"));
+            btn.querySelector(".btn__text").textContent = theme === "light" ? "Light" : "Dark";
+          }
+        }
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === "light" || saved === "dark") setTheme(saved);
+        else setTheme(window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+
+        document.getElementById("themeToggle")?.addEventListener("click", () => {
+          const cur = document.documentElement.getAttribute("data-theme") || "dark";
+          setTheme(cur === "light" ? "dark" : "light");
+        });
+
+        /* Nav mobile */
+        const btn = document.querySelector(".nav__toggle");
+        const menu = document.getElementById("navMenuGrades");
+        if (btn && menu) {
+          btn.addEventListener("click", () => {
+            const open = menu.classList.toggle("is-open");
+            btn.setAttribute("aria-expanded", String(open));
+          });
+        }
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>

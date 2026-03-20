@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website profile cá nhân - Sinh viên mới tốt nghiệp." />
+    <title>Profile | Nguyễn Văn Tiến</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Trang chủ">
+          <span class="brand__mark" aria-hidden="true">N</span>
+          <span class="brand__text">Nguyễn Văn Tiến</span>
+        </a>
+
+        <nav class="nav" aria-label="Điều hướng">
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="nav__toggleBars" aria-hidden="true"></span>
+            <span class="sr-only">Mở/đóng menu</span>
+          </button>
+
+          <div class="nav__menu" id="navMenu">
+            <a class="nav__link" href="#about">Giới thiệu</a>
+            <a class="nav__link" href="#skills">Kỹ năng</a>
+            <a class="nav__link" href="#projects">Sản phẩm</a>
+            <a class="nav__link" href="#services">Có thể làm</a>
+            <a class="nav__link" href="./bang-diem.html">Bảng điểm</a>
+            <a class="nav__link" href="#contact">Liên hệ</a>
+          </div>
+        </nav>
+
+        <div class="header__actions">
+          <button class="btn btn--ghost" type="button" id="themeToggle" aria-pressed="false">
+            <span class="btn__icon" aria-hidden="true">◐</span>
+            <span class="btn__text">Dark</span>
+          </button>
+          <!-- <a class="btn btn--primary" href="#contact">Liên Hệ</a> -->
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Nguyễn Văn Tiến</p>
+            <h1 class="hero__title">
+              <span class="grad">Hello mọi người</span> — Tôi là Nguyễn Văn Tiến.
+            </h1>
+            <p class="hero__subtitle">
+              Tôi là một sinh viên vừa tốt nghiệp chuyên ngành Công nghệ thông tin của trường Đại học Greenwich
+              và hiện đang tìm kiếm việc làm. Tôi có kinh nghiệm trong việc phát triển ứng dụng web và mobile.
+              Tập trung vào UI/UX sạch, hiệu năng tốt, và giao sản phẩm “xài được ngay”.
+              Bên dưới là kỹ năng và một số sản phẩm đã làm của tôi. Nếu công việc của bạn có liên quan đến các kỹ năng này, liên hệ với tôi để tôi hỗ trợ.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projects">Xem sản phẩm</a>
+              <a class="btn btn--primary" href="./bang-diem.html">Bảng điểm &amp; loại bằng</a>
+              <!-- <a class="btn btn--ghost" href="./assets/CV.pdf" download>Tải CV (PDF)</a> -->
+            </div>
+
+            <div class="hero__meta">
+              <div class="pill">
+                <span class="pill__k">Vị trí làm việc</span>
+                <span class="pill__v">[Hà Nội/Bắc Ninh/Remote]</span>
+              </div>
+              <div class="pill">
+                <span class="pill__k">Email</span>
+                <a class="pill__v link" href="mailto:tiennv1293@gmail.com">tiennv1293@gmail.com</a>
+              </div>
+              <div class="pill">
+                <span class="pill__k">GitHub</span>
+                <a class="pill__v link" href="https://github.com/tienhoanganh" rel="noreferrer">github.com/tienhoanganh</a>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero__card" aria-label="Thông tin nhanh">
+            <div class="profileCard">
+              <div class="profileCard__avatar" role="img" aria-label="Ảnh đại diện">
+                <img class="profileCard__img" src="./assets/avatar.png" alt="Nguyễn Văn Tiến" />
+              </div>
+
+              <div class="profileCard__body">
+                <h2 class="profileCard__name">Nguyễn Văn Tiến</h2>
+                <p class="profileCard__role">Junior Web Developer</p>
+
+                <dl class="kv">
+                  <div class="kv__row">
+                    <dt>Tech Stack</dt>
+                    <dd>Node.js · MongoDB · React</dd>
+                  </div>
+                  <div class="kv__row">
+                    <dt>Điểm mạnh</dt>
+                    <dd>UI tốt · Clean code · Database (MongoDB)</dd>
+                  </div>
+                  <div class="kv__row">
+                    <dt>Ngôn ngữ</dt>
+                    <dd>English B2 (Intermediate)</dd>
+                  </div>
+                </dl>
+
+                <div class="profileCard__links">
+                  <a class="chip" href="https://www.linkedin.com/in/tien-nguyen-van-83bb76202/" rel="noreferrer">LinkedIn</a>
+                  <a class="chip" href="https://portfolio-tienhoanganh.vercel.app/" rel="noreferrer">Portfolio</a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="sectionHead__title">Giới thiệu</h2>
+            <p class="sectionHead__desc">
+            </p>
+          </div>
+
+          <div class="grid2">
+            <article class="card">
+              <h3 class="card__title">Mình đang tìm</h3>
+              <p class="card__text">
+                Vị trí <b>Junior Frontend/Full-stack</b> để phát triển kỹ năng, tham gia xây sản phẩm thực tế,
+                và đóng góp vào trải nghiệm người dùng.
+              </p>
+              <ul class="list">
+                <li><b>Ưu tiên</b>: team có mentor/code review</li>
+                <li><b>Quan tâm</b>: e-commerce, edu, SaaS, dashboard</li>
+                <li><b>Mục tiêu</b>: ship nhanh + chất lượng + đo lường được</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Học vấn</h3>
+              <p class="card__text">
+                <b>Greenwich University | Công nghệ thông tin</b> — tốt nghiệp <b>2026</b>
+              </p>
+              <div class="timeline">
+                <div class="timeline__item">
+                  <div class="timeline__dot" aria-hidden="true"></div>
+                  <div class="timeline__content">
+                    <p class="timeline__title">Đồ án tốt nghiệp</p>
+                    <p class="timeline__desc">
+                      Wukong: The Lost Power — Game 3D bằng Unity.
+                      <img src="./assets/gamdoan.png" alt="Wukong: The Lost Power" width="400" height="250">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="skills">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="sectionHead__title">Kỹ năng</h2>
+            <p class="sectionHead__desc">Những công cụ/khả năng mình dùng thường xuyên để làm sản phẩm.</p>
+          </div>
+          <div class="skills" id="skillsGrid" aria-label="Danh sách kỹ năng"></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="sectionHead sectionHead--row">
+            <div>
+              <h2 class="sectionHead__title">Một số dự án tiêu biểu</h2>
+              <p class="sectionHead__desc">
+                Một vài dự án tiêu biểu. Mỗi card có mô tả, vai trò, tech stack và link demo.
+              </p>
+            </div>
+          </div>
+          <div class="projects" id="projectsGrid" aria-label="Danh sách dự án"></div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="services">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="sectionHead__title">Những gì mình có thể làm</h2>
+            <p class="sectionHead__desc">Các dịch vụ/đầu việc mình có thể nhận theo part-time/freelance hoặc full-time.</p>
+          </div>
+
+          <div class="grid3" id="servicesGrid" aria-label="Danh sách dịch vụ"></div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="sectionHead">
+            <h2 class="sectionHead__title">Liên hệ</h2>
+            <p class="sectionHead__desc">
+              Gửi mình yêu cầu dự án, mình sẽ phản hồi nhanh với đánh giá và kế hoạch triển khai.
+            </p>
+          </div>
+
+          <div class="grid2">
+            <form class="card form" id="contactForm">
+              <div class="form__row">
+                <label class="label" for="name">Tên</label>
+                <input class="input" id="name" name="name" autocomplete="name" placeholder="Tên của bạn" required />
+              </div>
+
+              <div class="form__row">
+                <label class="label" for="email">Email</label>
+                <input
+                  class="input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form__row">
+                <label class="label" for="message">Nội dung</label>
+                <textarea
+                  class="input textarea"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Bạn cần mình hỗ trợ gì? Deadline? Tech stack mong muốn? Tạo web profile như của tôi chẳng hạn,.."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form__actions">
+                <button class="btn btn--primary" type="submit">Gửi</button>
+                <button class="btn btn--ghost" type="reset">Xoá</button>
+              </div>
+            </form>
+
+            <aside class="card">
+              <h3 class="card__title">Trạng thái</h3>
+              <div class="status">
+                <span class="status__dot" aria-hidden="true"></span>
+                <span class="status__text">Sẵn sàng nhận job</span>
+              </div>
+
+              <div class="mini">
+                <p class="mini__title">Quan điểm làm việc</p>
+                <ul class="list">
+                  <li><b>Rõ yêu cầu</b> → chốt scope trước khi code</li>
+                  <li><b>Minh bạch</b> → update tiến độ đều</li>
+                  <li><b>Chất lượng</b> → ưu tiên maintainable</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">© <span id="year"></span> Nguyễn Văn Tiến</p>
+        <a class="link" href="#top">Lên đầu trang</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
