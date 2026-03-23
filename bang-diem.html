@@ -209,6 +209,7 @@
     <script>
       (function () {
         const STORAGE_KEY = "profile_theme";
+        const COUNTER_NAMESPACE = "tienhoanganh-profile-visits";
 
         const foundation = [
           ["SSGG101", "Study Skills", "Summer 2021", 8.9],
@@ -359,6 +360,12 @@
             btn.setAttribute("aria-expanded", String(open));
           });
         }
+
+        fetch(
+          `https://api.countapi.xyz/hit/${encodeURIComponent(COUNTER_NAMESPACE)}/${encodeURIComponent("profile-total")}`,
+        ).catch(() => {
+          // Keep page stable even if counter API is temporarily unavailable.
+        });
 
         document.getElementById("year").textContent = new Date().getFullYear();
       })();

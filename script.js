@@ -272,6 +272,33 @@ function initYear() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
+function formatCounterValue(value, digits = 8) {
+  const n = Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
+  return String(n).padStart(digits, "0");
+}
+
+async function hitCounter(namespace, key) {
+  const res = await fetch(`https://api.countapi.xyz/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(key)}`);
+  if (!res.ok) throw new Error("Không tăng được counter");
+  const json = await res.json();
+  return Number(json?.value || 0);
+}
+
+async function initVisitCounters() {
+  const profileEl = $("#profileCounter");
+  if (!profileEl) return;
+
+  const namespace = "tienhoanganh-profile-visits";
+
+  try {
+    const profileValue = await hitCounter(namespace, "profile-total");
+    profileEl.textContent = formatCounterValue(profileValue);
+  } catch (error) {
+    profileEl.textContent = "00000000";
+    console.error(error);
+  }
+}
+
 initTheme();
 initYear();
 initNav();
@@ -282,4 +309,5 @@ renderServices();
 renderContacts();
 initFilters();
 initContactForm();
+initVisitCounters();
 
