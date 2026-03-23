@@ -33,7 +33,7 @@ const data = {
       type: "Web - APP",
       desc: "Web bán hàng có giỏ hàng, admin quản lý sản phẩm, đăng nhập, phân quyền.",
       tags: ["React", "Node.js", "MongoDB", "JWT", "HTML5", "CSS3", "JavaScript", "Fetch API", "hash routing"],
-      demo: "#",
+      demo: "https://shopti-tho.vercel.app/",
       source: "#",
       role: "Full-stack",
     },
