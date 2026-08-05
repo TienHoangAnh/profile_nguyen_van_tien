@@ -10,15 +10,93 @@ const data = {
     linkedin: "https://linkedin.com/in/tienhoanganh",
     website: "https://portfolio-tienhoanganh.vercel.app/",
   },
-  skills: [
-    { name: "HTML/CSS", level: "Strong", desc: "Responsive layout, UI systems, accessibility cơ bản." },
-    { name: "JavaScript", level: "Strong", desc: "DOM, async, fetch, patterns, tối ưu tương tác." },
-    { name: "React", level: "Good", desc: "Component design, hooks, state, forms, routing." },
-    { name: "Node.js", level: "Good", desc: "REST API, auth cơ bản, xử lý file, background jobs." },
-    { name: "MongoDB", level: "Strong", desc: "Thiết kế bảng, join, index cơ bản, truy vấn tối ưu." },
-    { name: "Git", level: "Good", desc: "Workflow branch/PR, resolve conflicts, code review." },
-  ],
+skills: [
+  {
+    name: "Networking",
+    level: "Good",
+    desc: "TCP/IP, OSI Model, VLAN, Trunking, Inter-VLAN Routing, DHCP, NAT/PAT, Static Routing."
+  },
+  {
+    name: "System Administration",
+    level: "Good",
+    desc: "Linux Ubuntu, Windows Administration, NAS Management, File Sharing, User Access Control."
+  },
+  {
+    name: "Cisco Packet Tracer",
+    level: "Good",
+    desc: "Network lab simulation, Router-on-a-Stick, DHCP, NAT, VLAN deployment and troubleshooting."
+  },
+  {
+    name: "Troubleshooting",
+    level: "Strong",
+    desc: "Incident analysis, system monitoring, connectivity testing, log investigation, user support."
+  },
+  {
+    name: "HTML/CSS",
+    level: "Strong",
+    desc: "Responsive layouts, UI systems, accessibility fundamentals."
+  },
+  {
+    name: "JavaScript",
+    level: "Strong",
+    desc: "DOM, async programming, API integration, interactive web applications."
+  },
+  {
+    name: "React",
+    level: "Good",
+    desc: "Component architecture, hooks, routing, state management."
+  },
+  {
+    name: "Node.js",
+    level: "Good",
+    desc: "REST APIs, authentication, file processing, backend development."
+  },
+  {
+    name: "Java",
+    level: "Good",
+    desc: "OOP programming, desktop and academic projects."
+  },
+  {
+    name: "C#",
+    level: "Basic",
+    desc: "Unity development, scripting and gameplay systems."
+  },
+  {
+    name: "SQL",
+    level: "Good",
+    desc: "Database design, queries, stored procedures, optimization basics."
+  },
+  {
+    name: "MongoDB",
+    level: "Good",
+    desc: "Collections, aggregation, indexing and application integration."
+  },
+  {
+    name: "Git",
+    level: "Good",
+    desc: "Version control, branching workflow, merge conflict resolution."
+  },
+  {
+    name: "Synology NAS",
+    level: "Good",
+    desc: "Storage management, backup, file sharing and permission control."
+  },
+  {
+    name: "AI Tools",
+    level: "Good",
+    desc: "ChatGPT, Gemini, Claude for research, troubleshooting, documentation and productivity."
+  }
+],
   projects: [
+    {
+      title: "High School Management System",
+      type: "Web - APP",
+      desc: "Web quản lý học sinh, giáo viên, lớp học, điểm số, đăng nhập, phân quyền. Có thể mở trên Safari, nhấn 3 chấm chia sẻ link, add to Home screen. Sử dụng như một app thực tế mà không cần cài đặt từ App Store.",
+      tags: ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "Typescript"],
+      demo: "https://thpt-luong-tai-so2.vercel.app/",
+      source: "#",
+      role: "Full-stack",
+    },
     {
       title: "Orit Running",
       type: "Web - APP", 
