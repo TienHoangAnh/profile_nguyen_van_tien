@@ -63,10 +63,10 @@ Coursework (68)
 
 Các môn tính bằng tốt nghiệp:
 COMP1640	Enterprise Project	Spring 2025	62	Passed
-COMP1787	Coursework	Spring 2025	68	Passed
+COMP1787	Requirements Managent	Spring 2025	68	Passed
 COMP1786	Mobile App Dev	Fall 2025	62	Passed
 COMP1682.3	Final Project	Fall 2025	62	Passed (đồ án)
-COMP1649	Coursework	Fall 2025	64	Passed
+COMP1649	Human Computer Interaction and Design 	Fall 2025	64	Passed
 
 Điểm được tính như sau:
 <40 Fail
